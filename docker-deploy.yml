@@ -28,13 +28,13 @@ services:
       restart_policy:
         condition: any
     command: "--character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci"
-  redis-db:
-    image: redis
-    volumes:
-      - ./data/redis:/data
-    deploy:
-      restart_policy:
-        condition: any
+  #redis-db:
+  #  image: redis
+  #  volumes:
+  #    - ./data/redis:/data
+  #  deploy:
+  #    restart_policy:
+  #      condition: any
 
   php-fpm:
     image: zhaojunlike/php-fpm:5.6
